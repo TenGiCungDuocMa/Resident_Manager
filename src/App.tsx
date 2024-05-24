@@ -29,6 +29,7 @@ import CreateItemForm from './features/gift/CreateItemForm'
 import TamTruCreate from './features/temporary/TamTruCreate'
 import TamVangCreate from './features/temporary/TamVangCreate'
 import Overview from './features/statistical/Overview'
+import NotifyView from './features/notify/NotifyView'
 
 function App() {
   return (
@@ -87,6 +88,10 @@ function App() {
 
             <Route path="thong-tin">
               <Route index element={<AboutUs />} />
+            </Route>
+
+            <Route path="notifications">
+              <Route index element={<NotifyView />} />
             </Route>
           {/* </Route> */}
         </Route>

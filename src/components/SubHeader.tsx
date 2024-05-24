@@ -55,6 +55,9 @@ const SubHeader = ({
 
             {tamTruBtn ?? <></>}
             {tamVangBtn ?? <></>}
+            <Button type="primary" onClick={() => navigate('/notifications')}>
+              View Notifications
+            </Button>
           </Space>
         )}
       </>

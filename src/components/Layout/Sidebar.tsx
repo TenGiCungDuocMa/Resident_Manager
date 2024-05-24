@@ -9,7 +9,9 @@ import {
   SolutionOutlined,
   TeamOutlined,
   UserAddOutlined,
-  UserOutlined
+  UserOutlined,
+  BellOutlined,
+  BellFilled
 } from '@ant-design/icons'
 import { Avatar, Divider } from 'antd'
 import React from 'react'
@@ -62,6 +64,12 @@ const Sidebar = () => {
           activedIcon={<MacCommandFilled />}
           text="Thống kê"
           href="/"
+        />
+        <SideButton
+          icon={<BellOutlined />}
+          activedIcon={<BellFilled />}
+          text="Thông báo"
+          href="/notifications"
         />
         <SideButton
           icon={<TeamOutlined />}
