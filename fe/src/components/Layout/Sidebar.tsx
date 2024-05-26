@@ -57,56 +57,18 @@ const Sidebar = () => {
         <img className="w-3/5" src={Logo} alt="app logo" />
       </div>
       <div className="flex w-full grow flex-col items-center justify-start gap-1">
+      
         <SideButton
-          icon={<MacCommandOutlined />}
-          activedIcon={<MacCommandFilled />}
-          text="Thống kê"
-          href="/"
-        />
-        <SideButton
-          icon={<TeamOutlined />}
-          activedIcon={<TeamOutlined />}
-          text="Hộ khẩu"
-          href="/ho-khau"
-        />
-        <SideButton
-          icon={<SolutionOutlined />}
-          activedIcon={<SolutionOutlined />}
-          text="Nhân khẩu"
-          href="/nhan-khau"
-        />
-        <SideButton
-          icon={<UserAddOutlined />}
-          activedIcon={<UserAddOutlined />}
-          text="Tạm trú tạm vắng"
-          href="/tam-tru"
-        />
-        <SideButton
-          icon={<GiftOutlined />}
-          activedIcon={<GiftFilled />}
-          text="Tặng quà"
-          href="/su-kien"
+          icon={<UserOutlined />}
+          activedIcon={<UserOutlined />}
+          text="Hồ sơ"
+          href="/ho-so"
         />
         <Divider className="m-0" />
-        {/* <SideButton
-          icon={<InfoCircleOutlined />}
-          activedIcon={<InfoCircleFilled />}
-          text="Thông tin"
-          href="/thong-tin"
-        /> */}
       </div>
       <div className="w-full">
         <Divider className="m-0" />
         <div className="flex w-full items-center justify-between py-3">
-          {/* <div className="flex grow items-center justify-start gap-4">
-            <Avatar
-              className="flex items-center justify-center"
-              size={32}
-              icon={<UserOutlined />}
-            />
-            <p className="font-medium">Admin</p>
-          </div>
-          <CaretUpOutlined /> */}
           Đăng xuất
           <ButtonLogout />
         </div>

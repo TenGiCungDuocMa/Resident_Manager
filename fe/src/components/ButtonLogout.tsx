@@ -11,7 +11,7 @@ const ButtonLogout = () => {
   const onLogout = async () => {
     try {
       await sendLogout('logout')
-      localStorage.removeItem('accessToken')
+      localStorage.removeItem('token')
       navigate('/login')
     } catch (error) {
       console.error(error)
