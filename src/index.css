@@ -43,3 +43,17 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+
+.weather-title{
+  font-size: 25px;
+  font-weight: bolder;
+}
+.weather-info{
+  font-size: 20px;
+
+}
+.area{
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top:10px;
+}

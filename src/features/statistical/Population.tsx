@@ -1,4 +1,5 @@
 import React from 'react'
+import usePopular from './usePopular';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -15,7 +16,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 type PropsType = {
   className?: string
 }
-
+// const { years, populations } = usePopular();
 const options = {
   responsive: true,
   plugins: {
@@ -25,14 +26,16 @@ const options = {
   }
 }
 
-const labels = ['2017', '2018', '2019', '2020', '2021', '2022', '2023']
+const labels = ['2015', '2016', '2017', '2018', '2019', '2020', '2021']
 
 const data = {
   labels,
+  // years,
   datasets: [
     {
-      label: 'Số lượng nhân khẩu: ',
-      data: [200, 250, 342, 780, 988, 1200, 1367],
+      label: 'Số dân',
+      data: [8307, 8479, 8649, 8843, 9038, 9227, 9116],
+      // data: populations,
       backgroundColor: 'rgba(255, 99, 132, 0.5)'
     }
   ]
