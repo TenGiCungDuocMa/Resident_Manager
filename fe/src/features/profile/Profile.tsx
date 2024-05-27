@@ -122,9 +122,8 @@ const Profile = () => {
               label="Họ và tên"
               name="name"
               labelCol={{ span: 8 }}
-              rules={[{ required: true, message: 'Họ tên không được để trống' }]}
             >
-              <Input placeholder="Nhập họ và tên" />
+              <Input placeholder="Nhập họ và tên" readOnly className="readonly-input"/>
             </Form.Item>
 
             <Form.Item label="Tên riêng" name="anotherName" labelCol={{ span: 8 }}>
@@ -172,9 +171,8 @@ const Profile = () => {
             name="id"
             labelCol={{ span: 6 }}
             className="col-span-4 col-start-3"
-            rules={[{ message: 'Số CCCD không được để trống' }]}
           >
-            <Input placeholder="Nhập số CCCD" readOnly />
+            <Input placeholder="Nhập số CCCD" readOnly className="readonly-input"/>
           </Form.Item>
 
           <Form.Item
