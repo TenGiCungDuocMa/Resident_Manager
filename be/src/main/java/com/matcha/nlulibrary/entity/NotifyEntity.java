@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -16,7 +18,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "notify")
 public class NotifyEntity {
     @Id
-    private String id;
+    private int id;
     private String title;
     private String content;
+    private Date postedTime;
 }

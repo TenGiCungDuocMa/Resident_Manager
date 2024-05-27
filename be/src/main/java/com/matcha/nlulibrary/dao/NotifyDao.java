@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface NotifyDao extends JpaRepository<NotifyEntity, String> {
     List<NotifyEntity> findAll();
+
+    List<NotifyEntity> findNotifyEntityById(int id);
 }

@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Outlet />}>
         <Route path="login" element={<Login />} />
-          <Route element={<RequireAuth />}>
+          {/*<Route element={<RequireAuth />}>*/}
             <Route index element={<Overview />} />
             <Route path="ho-so">
               <Route index element={<Profile />} />
@@ -17,7 +17,7 @@ function App() {
             <Route path="notifications">
               <Route index element={<NotifyView />} />
             </Route>
-          </Route>
+          {/*</Route>*/}
       </Route>
     </Routes>
   )

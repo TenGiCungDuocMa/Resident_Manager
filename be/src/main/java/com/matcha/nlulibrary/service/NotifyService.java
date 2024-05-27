@@ -15,4 +15,8 @@ public class NotifyService {
     public List<NotifyEntity> getAllNotifies() {
         return notifyDao.findAll();
     }
+
+    public List<NotifyEntity> getNotifyDetail(int id) {
+        return notifyDao.findNotifyEntityById(id);
+    }
 }
