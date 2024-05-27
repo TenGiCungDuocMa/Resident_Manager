@@ -359,23 +359,6 @@ const Profile = () => {
 
           <Form.Item className="col-span-8 col-start-6 ms-32 ">
             <Space>
-              <Button
-                type="primary"
-                htmlType="button"
-                ghost
-                danger
-                onClick={() =>
-                  showDeleteConfirm({
-                    title: 'Bạn có chắc chắn muốn hủy quá trình ?',
-                    icon: <ExclamationCircleFilled />,
-                    onOk() {
-                      navigate(-1)
-                    }
-                  })
-                }
-              >
-                Hủy
-              </Button>
               <Button disabled={isLoading} type="primary" htmlType="submit" ghost>
                 {isLoading ? <LoadingOutlined /> : 'Cập nhật'}
               </Button>
