@@ -3,7 +3,7 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom'
 
 const RequireAuth = () => {
   const location = useLocation()
-  const token = localStorage.getItem('accessToken')
+  const token = localStorage.getItem('token') 
 
   return <>{token ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />}</>
 }

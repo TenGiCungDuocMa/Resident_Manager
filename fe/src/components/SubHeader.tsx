@@ -28,14 +28,6 @@ const SubHeader = ({
 
   return (
     <div className="mb-4 flex items-center justify-between">
-      <button
-        className="flex items-center justify-center gap-2 transition-colors hover:text-primary"
-        onClick={() => navigate(-1)}
-      >
-        <ArrowLeftOutlined />
-        <p>Trở về</p>
-      </button>
-
       <>
         {type === 'create' ? (
           <p className="text-xl font-medium">{title}</p>

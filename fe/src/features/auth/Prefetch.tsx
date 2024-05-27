@@ -7,20 +7,14 @@ import { useTemporaryStore } from '../temporary/temporaryStore'
 import { useEffectOnce } from 'usehooks-ts'
 
 const Prefetch = () => {
-  const [getHouseholdByPage] = useHouseholdStore(state => [state.getHouseholdByPage])
-  const [getResidents] = useResidentsStore(state => [state.getResidents])
-  const [getCurrentUser] = useAuthStore(state => [state.getCurrentUser])
   const [getTamTrus, getTamVangs] = useTemporaryStore(state => [
     state.getTamTrus,
     state.getTamVangs
   ])
 
   useEffectOnce(() => {
-    getHouseholdByPage({ page: 1, offset: 10 })
-    getResidents()
     getTamTrus()
     getTamVangs()
-    getCurrentUser()
   })
 
   return <Outlet />

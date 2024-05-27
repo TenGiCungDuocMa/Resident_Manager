@@ -2,32 +2,39 @@ import React, { useState } from 'react'
 import DefaultLayout from '~/components/Layout/DefaultLayout'
 import { LoadingOutlined, LockOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Checkbox, Form, Input } from 'antd'
-import { CredentialsType, useLoginMutation } from './authApiSlice'
 import { useNavigate } from 'react-router-dom'
-import { useAuthStore } from './authStore'
+import axios from 'axios'
+
+interface LoginData {
+  id: string
+  password: string
+}
 
 const Login = () => {
   const navigate = useNavigate()
   const [form] = Form.useForm()
-  const [login] = useAuthStore(state => [state.login])
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const onFinish = (values: CredentialsType) => {
-    try {
-      setIsLoading(true)
-      const { username, password } = values
-      login({ username, password })
-      form.resetFields()
-      navigate('/')
-    } catch (error) {
-      const apiError = error as { status: number }
-      if (apiError.status === 401) {
+  const onFinish = (values: LoginData) => {
+    setIsLoading(true)
+    console.log(values)
+    axios
+      .post('http://localhost:9998/api/v1/auth/login', {
+        id: values.id,
+        password: values.password
+      })
+      .then(response => {
+        console.log(response.data)
+        localStorage.setItem('token', response.data.token)
+        navigate('/ho-so')
+      })
+      .catch(error => {
         alert('Tên đăng nhập hoặc mật khẩu không đúng.')
-      }
-    } finally {
-      setIsLoading(false)
-    }
+      })
+      .finally(() => {
+        setIsLoading(false)
+      })
   }
 
   return (
@@ -42,7 +49,7 @@ const Login = () => {
           className="mt-12 w-full"
         >
           <Form.Item
-            name="username"
+            name="id"
             rules={[{ required: true, message: 'Tên đăng nhập không thể bỏ trống.' }]}
           >
             <Input
