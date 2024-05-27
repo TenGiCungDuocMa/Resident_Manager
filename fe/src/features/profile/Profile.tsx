@@ -131,7 +131,7 @@ const Profile = () => {
               <Input placeholder="Tên thường gọi" />
             </Form.Item>
 
-            <Form.Item label="Tên riêng" name="password" labelCol={{ span: 8 }}>
+            <Form.Item label="Tên riêng" name="password" labelCol={{ span: 8 }} hidden>
               <Input placeholder="Tên thường gọi" hidden/>
             </Form.Item>
           </div>
@@ -182,7 +182,6 @@ const Profile = () => {
             name="dateCreatedId"
             labelCol={{ span: 6 }}
             className="col-span-4 col-start-3"
-            rules={[{ message: 'Ngày cấp không được để trống' }]}
           >
             <DatePicker
               placeholder="Ngày cấp"
