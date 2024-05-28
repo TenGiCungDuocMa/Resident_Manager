@@ -30,7 +30,8 @@ import TamTruCreate from './features/temporary/TamTruCreate'
 import TamVangCreate from './features/temporary/TamVangCreate'
 import Overview from './features/statistical/Overview'
 import Profile from './features/profile/Profile'
-
+import NotifyView from './features/notify/NotifyView'
+import NotifyDetail from "~/features/notify/NotifyDetail";
 function App() {
   return (
     <Routes>
@@ -42,6 +43,10 @@ function App() {
 
             <Route path="ho-so">
               <Route index element={<Profile />} />
+            </Route>
+            <Route path="notifications">
+              <Route index element={<NotifyView />} />
+                <Route path=":id" element={<NotifyDetail />} />
             </Route>
           </Route>
       </Route>

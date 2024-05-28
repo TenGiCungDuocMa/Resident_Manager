@@ -14,7 +14,7 @@ import axios from 'axios'
 
 interface Profile {
   name: string
-  dob: string
+    dob: string
   idNumber: string
   address: string
   family: any[]
