@@ -16,6 +16,7 @@
     "antd-dayjs-webpack-plugin": "^1.0.6",
     "axios": "^1.4.0",
     "chart.js": "^4.3.0",
+    "date-fns": "^3.6.0",
     "dayjs": "^1.11.9",
     "firebase": "^9.23.0",
     "framer-motion": "^10.12.12",
