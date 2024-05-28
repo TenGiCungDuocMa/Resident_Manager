@@ -1,4 +1,4 @@
-import { List , Divider } from 'antd'
+import { List } from 'antd'
 
 type NotificationItemProps = {
     title: string

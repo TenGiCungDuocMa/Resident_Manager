@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import { List, Divider } from 'antd';
+import { List } from 'antd';
 import NotificationItem from './NotificationItem';
 import HomeLayout from "~/components/Layout/HomeLayout";
 import SubHeader from "~/components/SubHeader";
