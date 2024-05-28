@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import {List} from 'antd';
+import { List, Divider } from 'antd';
 import NotificationItem from './NotificationItem';
 import HomeLayout from "~/components/Layout/HomeLayout";
 import SubHeader from "~/components/SubHeader";
@@ -25,7 +25,7 @@ const NotifyComponent = () => {
     return (
         <HomeLayout>
             <SubHeader title="Thông báo" type="create"/>
-            <div className="w-full rounded-lg bg-bgPrimary px-4 py-2 shadow-md">
+            <div>
                 {notifications.length === 0 ? (
                     <p>Hiện tại chưa có thông báo.</p>
                 ) : (
@@ -33,9 +33,10 @@ const NotifyComponent = () => {
                         itemLayout="vertical"
                         dataSource={notifications}
                         renderItem={({id, title, content}) => (
-                            <Link to={`/notify/${id}`} key={id}>
+                            <Link to={`/notifications/${id}`} key={id}>
                                 <NotificationItem title={title} content={content}/>
                             </Link>
+
                         )}
                     />
                 )}
