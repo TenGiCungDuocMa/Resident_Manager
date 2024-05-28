@@ -1,14 +1,16 @@
-import {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { List } from 'antd';
 import NotificationItem from './NotificationItem';
 import HomeLayout from "~/components/Layout/HomeLayout";
 import SubHeader from "~/components/SubHeader";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface Notification {
     id: number;
     title: string;
     content: string;
+    detail: string | null;
 }
 
 const NotifyComponent = () => {
@@ -21,10 +23,15 @@ const NotifyComponent = () => {
             .catch(error => console.error('Error fetching data:', error));
     }, []);
 
+    const handleNotificationClick = (notification: Notification) => {
+        if (!notification.detail) {
+            toast.warn('Thông báo này không có thông báo chi tiết!');
+        }
+    };
 
     return (
         <HomeLayout>
-            <SubHeader title="Thông báo" type="create"/>
+            <SubHeader title="Thông báo" type="create" />
             <div>
                 {notifications.length === 0 ? (
                     <p>Hiện tại chưa có thông báo.</p>
@@ -32,17 +39,19 @@ const NotifyComponent = () => {
                     <List
                         itemLayout="vertical"
                         dataSource={notifications}
-                        renderItem={({id, title, content}) => (
-                            <Link to={`/notifications/${id}`} key={id}>
-                                <NotificationItem title={title} content={content}/>
-                            </Link>
-
+                        renderItem={({ id, title, content, detail }) => (
+                            <div onClick={() => handleNotificationClick({ id, title, content, detail })}>
+                                {detail ? (
+                                    <NotificationItem title={title} content={content} to={`/notifications/${id}`} />
+                                ) : (
+                                    <NotificationItem title={title} content={content} clickable={false} />
+                                )}
+                            </div>
                         )}
                     />
                 )}
             </div>
         </HomeLayout>
-
     );
 };
 

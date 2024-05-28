@@ -22,4 +22,5 @@ public class NotifyEntity {
     private String title;
     private String content;
     private Date postedTime;
+    private String detail;
 }
