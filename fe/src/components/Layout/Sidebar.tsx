@@ -14,8 +14,7 @@ import {
 import { Avatar, Divider } from 'antd'
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import Logo from '~/assets/logo.png'
-import Rem from '~/assets/rem.png'
+import Logo from '~/assets/Logo_HCMUAF.svg'
 import ButtonLogout from '../ButtonLogout'
 
 type SideButtonProps = {
@@ -53,8 +52,7 @@ const Sidebar = () => {
   return (
     <div className="flex h-full min-w-[13rem] max-w-[13rem] flex-col items-center justify-start gap-8 px-3 pt-8">
       <div className="ml-[-8px] flex items-start justify-center gap-2">
-        <img className="left-0 top-0 w-9" src={Rem} alt="rem-img" />
-        <img className="w-3/5" src={Logo} alt="app logo" />
+        <img className="left-0 top-0 w-20" src={Logo} alt="rem-img" />
       </div>
       <div className="flex w-full grow flex-col items-center justify-start gap-1">
       

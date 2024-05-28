@@ -135,6 +135,10 @@ const Profile = () => {
             </Form.Item>
           </div>
 
+          <Form.Item className="ms-4">
+            <UploadImage image={image} setImage={setImage} />
+          </Form.Item>
+
           <Form.Item
             label="Ngày sinh"
             name="dob"
