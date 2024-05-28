@@ -64,7 +64,6 @@ const Sidebar = () => {
           text="Hồ sơ"
           href="/ho-so"
         />
-        <Divider className="m-0" />
         <SideButton
             icon={<BellOutlined />}
             activedIcon={<BellFilled />}
