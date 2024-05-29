@@ -56,18 +56,14 @@ const Sidebar = () => {
       <div className="ml-[-8px] flex items-start justify-center gap-2">
         <img className="left-0 top-0 w-20" src={Logo} alt="rem-img" />
       </div>
-      <div className="flex w-full grow flex-col items-center justify-start gap-1">
 
-        <SideButton
-          icon={<UserOutlined />}
-          activedIcon={<UserOutlined />}
+      <div className="flex w-full grow flex-col items-center justify-start gap-1">
+      <SideButton
+          icon={<MacCommandFilled />}
+          activedIcon={<MacCommandOutlined />}
           text="Trang chủ"
           href="/trang-chu"
         />
-        <Divider className="m-0" />
-      </div>
-
-      <div className="flex w-full grow flex-col items-center justify-start gap-1">
 
         <SideButton
           icon={<UserOutlined />}
