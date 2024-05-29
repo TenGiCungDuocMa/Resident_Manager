@@ -77,13 +77,9 @@ const Sidebar = () => {
             text="Thông báo"
             href="/notifications"
         />
-        <Divider className="m-0" />
-      </div>
-      <div className="flex w-full grow flex-col items-center justify-start gap-1">
-
         <SideButton
-          icon={<UserOutlined />}
-          activedIcon={<UserOutlined />}
+          icon={<InfoCircleOutlined />}
+          activedIcon={<InfoCircleFilled />}
           text="Đăng kí tạm trú"
           href="/tam-tru"
         />
