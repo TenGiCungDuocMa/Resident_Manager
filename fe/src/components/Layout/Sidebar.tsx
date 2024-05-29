@@ -57,7 +57,18 @@ const Sidebar = () => {
         <img className="left-0 top-0 w-20" src={Logo} alt="rem-img" />
       </div>
       <div className="flex w-full grow flex-col items-center justify-start gap-1">
-      
+
+        <SideButton
+          icon={<UserOutlined />}
+          activedIcon={<UserOutlined />}
+          text="Trang chủ"
+          href="/trang-chu"
+        />
+        <Divider className="m-0" />
+      </div>
+
+      <div className="flex w-full grow flex-col items-center justify-start gap-1">
+
         <SideButton
           icon={<UserOutlined />}
           activedIcon={<UserOutlined />}

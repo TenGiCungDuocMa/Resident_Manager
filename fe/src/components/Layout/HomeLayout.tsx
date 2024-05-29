@@ -37,7 +37,6 @@ const HomeLayout = ({ children }: PropsType) => {
           >
             {children}
           </motion.div>
-          {/* <p className="text-end text-sm opacity-30">© 2023 KTPM Team. All Rights Reserved.</p> */}
         </div>
       </div>
     </AnimatePresence>

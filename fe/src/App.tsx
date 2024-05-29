@@ -39,7 +39,9 @@ function App() {
         <Route path="login" element={<Login />} />
 
           <Route element={<RequireAuth />}>
-            <Route index element={<Overview />} />
+            <Route path="trang-chu">
+              <Route index element={<Overview />} />
+            </Route>
 
             <Route path="ho-so">
               <Route index element={<Profile />} />
