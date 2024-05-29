@@ -50,6 +50,9 @@ function App() {
               <Route index element={<NotifyView />} />
                 <Route path=":id" element={<NotifyDetail />} />
             </Route>
+            <Route path="tam-tru">
+              <Route index element={<Temporary />} />
+            </Route>
           </Route>
       </Route>
     </Routes>

@@ -40,7 +40,7 @@ body {
 }
 
 .ant-modal-footer {
-  display: flex;
+  display: none;
   justify-content: flex-end;
 }
 .weather-title{

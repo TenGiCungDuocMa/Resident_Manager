@@ -17,6 +17,11 @@ const items: TabsProps['items'] = [
     key: 'tam-vang',
     label: `Tạm vắng`,
     children: <TamVangsTable />
+  },
+  {
+    key: 'tam-tru-create',
+    label: `Đăng kí tạm trú`,
+    children: <TamTruCreate />
   }
 ]
 

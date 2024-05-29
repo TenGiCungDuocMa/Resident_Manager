@@ -77,8 +77,15 @@ const Sidebar = () => {
             text="Thông báo"
             href="/notifications"
         />
+        <SideButton
+          icon={<InfoCircleOutlined />}
+          activedIcon={<InfoCircleFilled />}
+          text="Đăng kí tạm trú"
+          href="/tam-tru"
+        />
         <Divider className="m-0" />
       </div>
+
       <div className="w-full">
         <Divider className="m-0" />
         <div className="flex w-full items-center justify-between py-3">
