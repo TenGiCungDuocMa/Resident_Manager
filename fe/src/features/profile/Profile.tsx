@@ -14,7 +14,7 @@ import axios from 'axios'
 
 interface Profile {
   name: string
-  dob: string
+    dob: string
   idNumber: string
   address: string
   family: any[]
@@ -134,6 +134,10 @@ const Profile = () => {
               <Input placeholder="Tên thường gọi" hidden/>
             </Form.Item>
           </div>
+
+          <Form.Item className="ms-4">
+            <UploadImage image={image} setImage={setImage} />
+          </Form.Item>
 
           <Form.Item
             label="Ngày sinh"
@@ -359,23 +363,6 @@ const Profile = () => {
 
           <Form.Item className="col-span-8 col-start-6 ms-32 ">
             <Space>
-              <Button
-                type="primary"
-                htmlType="button"
-                ghost
-                danger
-                onClick={() =>
-                  showDeleteConfirm({
-                    title: 'Bạn có chắc chắn muốn hủy quá trình ?',
-                    icon: <ExclamationCircleFilled />,
-                    onOk() {
-                      navigate(-1)
-                    }
-                  })
-                }
-              >
-                Hủy
-              </Button>
               <Button disabled={isLoading} type="primary" htmlType="submit" ghost>
                 {isLoading ? <LoadingOutlined /> : 'Cập nhật'}
               </Button>
