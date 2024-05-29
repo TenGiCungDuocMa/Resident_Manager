@@ -8,6 +8,7 @@ public class NluLibraryApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(NluLibraryApplication.class, args);
+
     }
 
 }

@@ -66,6 +66,17 @@ const Sidebar = () => {
         />
         <Divider className="m-0" />
       </div>
+      <div className="flex w-full grow flex-col items-center justify-start gap-1">
+
+        <SideButton
+          icon={<UserOutlined />}
+          activedIcon={<UserOutlined />}
+          text="Đăng kí tạm trú"
+          href="/tam-tru"
+        />
+        <Divider className="m-0" />
+      </div>
+
       <div className="w-full">
         <Divider className="m-0" />
         <div className="flex w-full items-center justify-between py-3">

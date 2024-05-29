@@ -31,6 +31,7 @@ import TamVangCreate from './features/temporary/TamVangCreate'
 import Overview from './features/statistical/Overview'
 import Profile from './features/profile/Profile'
 
+
 function App() {
   return (
     <Routes>
@@ -42,6 +43,10 @@ function App() {
 
             <Route path="ho-so">
               <Route index element={<Profile />} />
+            </Route>
+
+            <Route path="tam-tru">
+              <Route index element={<Temporary />} />
             </Route>
           </Route>
       </Route>
