@@ -27,7 +27,7 @@ const Login = () => {
       .then(response => {
         console.log(response.data)
         localStorage.setItem('token', response.data.token)
-        navigate('/ho-so')
+        navigate('/trang-chu')
       })
       .catch(error => {
         alert('Tên đăng nhập hoặc mật khẩu không đúng.')
@@ -40,7 +40,7 @@ const Login = () => {
   return (
     <DefaultLayout>
       <div className="bg-slate-600 w-[25vw] rounded-md p-4">
-        <h6 className="text-center text-3xl font-bold">Tổ dân phố số 7</h6>
+        <h6 className="text-center text-3xl font-bold">Ứng dụng quản lý dân cư</h6>
         <Form
           form={form}
           name="login"
